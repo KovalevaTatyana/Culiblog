@@ -1,0 +1,283 @@
+@font-face {
+    font-family: Seymour;
+    src: url(../../fonts/SeymourOne-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-light;
+    src: url(../../fonts/Roboto/light.ttf);
+}
+@font-face {
+    font-family: Roboto-black;
+    src: url(../../fonts/Roboto/black.ttf);
+}
+@font-face {
+    font-family: Roboto-regular;
+    src: url(../../fonts/Roboto/regular.ttf);
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+ul, h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding: 0;
+    margin: 0; 
+    background: url(../images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+header.header {
+    display: flex;
+    background: url(../images/white.jpg) repeat-x;
+    justify-content: center;
+    width: 100%;
+}
+h1.wrap-title {
+    padding-bottom: 7px;
+    display: flex;
+    justify-content: center;
+}
+h1.wrap-title a {
+    color: chocolate;
+    font-family: Seymour;
+    font-size: 70px;
+}
+form#searchform {
+    display: flex;
+    flex-wrap: nowrap;
+}
+input#s {
+    height: 30px;
+    background: oldlace;
+    border: 1px solid black;
+    border-radius: 10px 0 0 10px;
+    padding-left: 25px;
+    flex-basis: 80%;
+}
+input#s::placeholder {    
+    font-family: Roboto-light;
+    font-size: 15px;
+    color: peru;
+}
+input#searchsubmit {
+    height: 30px;
+    background: chocolate;
+    border: 1px solid black;
+    border-radius: 0 10px 10px 0;
+    font-family: Roboto-light;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    flex-basis: 20%;
+}
+
+
+div.middle {
+    padding-top: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+main.main {
+    background: oldlace;
+    border: 5px solid chocolate;
+    border-radius: 15px;
+    font-family: Roboto-light;
+    margin-bottom: 5%;
+    flex-basis: 70%;
+    padding: 10px 30px;   
+}
+h2.recipes-name {
+    font-size: 22px;
+    font-family: Roboto-black;
+    color: peru;
+    text-align: center;
+    padding-bottom: 10px;
+}
+img.recipes-foto {
+    display: block;
+    margin: 0 auto;
+}
+ul.ingredients {
+    margin: 20px;
+ }
+.ingredients li {
+    font-family: Roboto-light;
+    font-size: 20px; 
+    color: Sienna;
+}
+.cooking>p {
+    margin: 10px;
+    font-family: Roboto-light;
+    font-size: 18px; 
+    color: SaddleBrown;
+}
+
+
+aside.sidebar {
+    display: flex;
+    justify-content: center;
+    background: oldlace;
+    border: 5px solid peru;
+    border-radius: 22px;
+    font-family: Roboto-regular;
+    font-size: 20px; 
+    flex-basis: 11%;
+    height: 320px;
+}
+nav.navigation-sidebar {
+    flex-basis: 100%;
+}
+li.navigation-sidebar-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2px;
+}
+a.navigation-sidebar-link {
+    color: peru;
+}
+a.navigation-sidebar-link:hover {
+    background: peru;
+    color: white;
+} 
+.navigation-sidebar h3 {
+    font-size: 22px;
+    font-family: Roboto-black;
+    color: white;
+    background: peru;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+
+footer.footer {
+    background: url(../images/white.jpg) repeat-x;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+p.copyright {
+    font-family: Roboto-light;
+    font-size: 18px; 
+    color: SaddleBrown;
+}
+ul.page-numbers {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+}
+ul.page-numbers li:not(:disabled):not(:disabled) {
+    cursor: pointer;
+}
+a.page-numbers, span.current {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: peru;
+    background-color: white;
+    border: 1px solid black;
+}
+span.current {
+    color: white;
+    background-color: peru;
+    cursor: default;
+}
+span.dots {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: peru;
+    background-color: white;
+    border: 1px solid black;
+    cursor: default;
+}
+nav.navigation {
+    width: 100%;
+}
+
+
+@media screen and (max-width:1023px) {
+div.middle {
+    position: relative;
+    overflow-x: hidden;
+}
+main.main {
+    transition: 0.5s;
+    position: relative;
+    z-index: 0;
+    padding: 10px 30px;
+}
+main.main_active {
+    transform: translateX(-20%);
+}
+aside.sidebar {
+    position: fixed;
+    right: 0;
+    z-index: 99;
+    width: 19%;
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+aside.sidebar_active {
+    transform: translateX(-20%);
+}
+.burger {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -160px;
+    top: 10px;
+    display: block;
+    background-color: peru;
+    border-radius: 50%;
+}
+.burger .toggle,
+.burger .toggle::before,
+.burger .toggle::after {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    margin: -1px 0 0 -10px;
+    width: 20px;
+    height: 2px;
+    background-color: oldlace;
+}
+.burger .toggle::before,
+.burger .toggle::after {
+    content: '';
+    display: block;
+    transition: 0.2s;
+}
+.burger .toggle::before {
+    transform: translateY(-5px);
+}
+.burger .toggle::after {
+    transform: translateY(5px);
+}
+.burger_active .toggle:before {
+    transform: rotate(-35deg);
+    width: 10px;
+    transform-origin: left bottom;
+}
+.burger_active .toggle:after {
+    transform: rotate(35deg);
+    width: 10px;
+    transform-origin: left top;
+}
+.burger_active {
+    left: -80px;
+}
+}
